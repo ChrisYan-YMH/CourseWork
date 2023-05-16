@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSL and TLS: Secure Protocols for Internet Communication</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        
+        p {
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .pic_text {
+            margin: 10px 20px;
+        }
+
+        #ref {
+            font-size: x-small;
+            font-style: italic;
+        }
+
+        #bold {
+            font-weight: bold;
+        }
+
+        #small_title {
+            font-weight: bold;
+            font-style: italic;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <h2>SSL and TLS: Secure Protocols for Internet Communication</h2>
+    <hr>
+    <br>
+    <h3>What is SSL?</h3>
+    <img class="pic_text" src="Picture/https-ssl-certificate.png" width="500px">
+    <p><span id="small_title">SSL (Secure Sockets Layer)</span> is an original protocol for <a id="bold">secure internet communication</a>.  It was introduced by a company called <a id="bold">Netscape</a> in the mid-1990s. However, we no longer use this as a newer version is available, which we will discuss later.
+</p>
+    <h3>How does it work?</h3>
+    <p>SSL does its job by combining <a id="bold">public key and symmetric key <a href="encryption.html">encryption</a></a>, which we have previously discussed, between one client to a server. It allows the two to <a id = "bold">verify each other's identities</a> and establish a safe connection for transmitting data, including private information that you don’t want to expose to a hacker or an imposter.
+</p>
+    <h3>What is TLS?</h3>
+    <p>This right here is the reason why we don’t use SSL anymore. <span id="small_title">TLS (Transport Layer Security)</span>, which we often call it as a successor when compared to SSL, is SSL's bigger brother.  TLS does the same job as SSL, but adding features makes it more reliable. Since its introduction at the end of the 1990s, it has evolved into the<a id="bold"> industry standard</a> for safe online communication. However, we just called them both “SSL” because we don’t want to make it complicated.
+</p>
+    <h3>How does it work?</h3>
+    <p>TLS works just like SSL but with a very important feature called<a href="https://www.cloudwards.net/perfect-forward-secrecy/"> Forward secrecy.</a> With this new feature, TLS can <a id="bold">prevent decryption</a> of previous communication even if a server's private key is compromised. It generates <a id="bold">a new key</a> for each TLS session, which is not derived from the server's private key. Below is a video showing how it works in detail! Make sure to check it out.
+</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zSQtyW_ywZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h3>Benefits of SSL and TLS</h3>
+    <p>There are many benefits when it comes to using SSL. Below are a few examples that I think are very notable.
+</p>
+    <ul>
+        <li><span id="bold">Secure communication:</span> SSL makes it possible to send <a id="bold">sensitive data</a> securely and safely, like <a id="bold">passwords</a> and <a id="bold">credit card numbers</a>.by encryption.
+</li>
+        
+        <li><span id="bold">Authentication:</span> SSL lets the client and server validate each other's identity, guaranteeing that the client connects with the <span id="bold">intended server</span> and not an <span id="bold">impostor</span>.</li>
+        
+        <li><span id="bold">Standardization:</span> TLS has replaced SSL as the primary protocol for secure internet communication and has become the <span id="bold">standard</span> for secure web communication.</li>
+        
+        <li><span id="bold">Compatibility:</span> SSL is accessible and <span id="bold">widely used</span> because they are compatible with the most of web browsers and operating systems.</li>
+    </ul>
+
+</p>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h3 class="pic_text">Reference</h3>
+    <ul id="ref" class="pic_text">
+        <li>Hougen, A. (2020, January 17). What is perfect forward secrecy? A guide for 2023. Cloudwards. https://www.cloudwards.net/perfect-forward-secrecy/</li>
+        <li>What is SSL/TLS? Meaning, types, and benefits. (2022, October 19). Spiceworks. https://www.spiceworks.com/it-security/vulnerability-management/articles/what-is-ssl-tls/</li>
+    </ul>
+</body>
+</html>

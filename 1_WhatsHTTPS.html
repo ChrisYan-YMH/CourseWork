@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HTTPS & HTTP</title>
+
+    <style>
+        
+        /*Unitified the font for the webpage*/
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .pic_text{
+            margin: 10px 20px;
+        }
+
+        #small_title{
+            font-weight: bold;
+            font-style: italic;
+            font-size: small;
+        }
+
+        #hyref{
+            font-style: italic;
+            color:cornflowerblue;
+            text-decoration: underline;
+            
+        }
+
+        table {
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        #ref{
+            font-size: x-small;
+            font-style: italic;
+        }
+
+        #compl{
+            font-size: smaller;
+            font-style: italic;
+        }
+
+        #bold{font-weight: bold;}
+
+        .header {
+            width:100%;
+            height: 550px;
+            background-image: url("./Picture/pexels-miguel-á-padriñán-2882570.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        nav {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+        }
+
+        .logo {
+            width: 150px;
+            margin: 0 auto 20px auto;
+            cursor: pointer;
+            font-size: 2rem;
+            font-weight: 250;
+        }
+
+        nav ul {
+            width: 100%;
+            background: rgb(16, 122, 64);
+            list-style:none;
+            margin-bottom:0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 15px 20px;
+        }
+
+        /* change the font */
+        nav ul li a {
+            text-decoration: none;
+            color: white;            
+        }
+
+        nav.sticky {
+            position: fixed;
+            opacity: 0.8;
+            left:0;
+            top:0;
+            background-color: #000;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+            transition: 0.6s;
+        }
+
+        nav.sticky .logo {
+            margin-top: 10px;
+        }
+
+        /*change it to transparent for better look of the web */
+        nav.sticky ul {
+            background-color: transparent;
+            font-size:1.3rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <nav class="navbar">
+            <h2 class="logo">Table Of Content</h2>
+            <ul class="menu">
+                <li><a href="#What_is_HTTP">What is HTTP?</a></li>
+                <li><a href="#How_HTTP_Work">How HTTP works?</a></li>
+                <li><a href="#Difference">The Difference between HTTP and HTTPS?</a></li>
+                <li><a href="#entr">Encryption</a></li>
+                <li><a href="#remark">Remark</a></li>
+                <li><a href="#ref">Reference</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <h2 class="pic_text" class="pic_text">HTTPS Vs. HTTP</h2> 
+    <hr>
+    <br>
+    <br>
+    <img class="pic_text" src="Picture/cyber-security-g081cd9830_1920.jpg" width="900px">
+
+    <h3 id="What_is_HTTP" class="pic_text">What is the HTTP?</h3>
+    <p class="pic_text">Before really dive into the topic of HTTPS, it is better to understand what is HTTP first. </p>
+    <p class="pic_text">
+        <span id="small_title">HTTP (Hypertext Transfer Protocol)</span>
+        is the set of rule for transferring different files over the web, the fille including text, images, sound, and other multi-media file. It is the tool for <a href="https://www.geeksforgeeks.org/world-wide-web-www/">World Wide Web (WWW)</a> to communicate between <span id="bold">client</span> and 
+        <span id="bold">servers</span>. Therefore, it just like a language that is not used by human, but between clients (computers) and the servers.
+    </p>
+    <br>
+
+    <h3 id="How_HTTP_Work" class="pic_text">How Does HTTP work?</h3>
+    <img class="pic_text" src="Picture/How_HTTP_Word.png" width="900px">
+    <p class="pic_text">All the communications are done by <a id="bold">request</a> and <a id="bold">responeses</a>. Here are the steps for a computer communicating with the servers:</p>
+    <ol type="a" class="pic_text">
+        <li>The client (typically a browser) send an <a id="bold">HTTP request</a> to the server</li>
+        <li>The servers receive the request</li>
+        <li>The server check whether to apply the request</li>
+        <li>If approved, the server will return the <a id='bold'>HTTP response</a> to the client</li>
+        <li>The cilent receives the responses and renders the wanted content on the browser.</li>
+    </ol>
+    <br>
+    
+    <h3 id="Difference" class="pic_text">What's the difference between HTTP and HTTPS</h3>
+    <p class="pic_text">We have gone through so many details about HTTP, so what really is the difference?</p>
+    <p class="pic_text">Most of the things are the same for both HTTP and HTTPS except <span id="bold">encryption</span></p>
+    <br>
+    <h3 id="entr" class="pic_text">Encryption</h4>
+    <p class="pic_text"><span id="small_title">HTTPS (HTTP-Hypertext-Transfer-Protocol Secure)</span> as its name suggested, is more secure version of HTTP. HTTPS is a much more secure and reliable protocol for transmitting sensitive information.</p>
+    <p class="pic_text">The uses of <span id="small_title">SSL (Secure Sockets Layer)</span> or <span id="small_title">TLS (Transport Layer Security)</span> protocol have been implemented for the encryption and the decryption of the data transmitted between the browser and the servers.</p>
+    <p class="pic_text">
+        It is important to have these kinds of protocols for encryption when inputting sensitive data, like password. Just by using http, data can easily be captured and get all the information you input on the web. This can easily be done by some software, like Wireshark. Here is a video that shows how to use Wireshark to capture the information<br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/r0l_54thSYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>Thus, it is necessary to have a more secure website since there are many transactions done online. No one wants to disclose their credit card number publicly.
+    </p>
+    <br>
+
+    <h3 id="remark" class="pic_text">Remark</h3>
+    <p class="pic_text">This page is just the introduction for you to understand what the brief difference between HTTP and HTTPS is. If you want to know more about the asymmetric keyexchange, TSL&SSL and Unique Key Exchange in TSL. Please click the button above to learn more!</p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h3 class="pic_text">Reference</h3>
+    <ul id="ref" class="pic_text">
+        <li>Chai,  . & Fegruson, K. (n.d.). What is HTTP and how does it work? Hypertext Transfer Protocol Definition. Techtarget. https://www.techtarget.com/whatis/definition/HTTP-Hypertext-Transfer-Protocol</li>
+        <li>Anonymous,  (n.d.). What is HTTP. W3schools. https://www.w3schools.com/whatis/whatis_http.asp</li>
+    </ul>
+
+
+</body>
+
+</html>
+
+<script> // Setting the condition of nav (TOC) when to be transparent  
+        const navbar = document.querySelector(".navbar")
+        const menu = document.querySelector(".menu");
+
+        //When the header reach ul, freeze the header 
+        window.addEventListener("scroll",()=>{
+            // Scroll down to reach the menu
+            if(window.pageYOffset >= menu.offsetTop) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky")
+            }
+        })
+</script>

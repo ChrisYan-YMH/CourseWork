@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<header>
+  <title>https handshake</title>
+  <style>
+    /*Unitified the font for the webpage*/
+    * {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .pic_text {
+      margin: 10px 20px;
+    }
+
+    #bold {
+      font-weight: bold;
+    }
+
+    #small_title {
+      font-weight: bold;
+      font-style: italic;
+      font-size: small;
+    }
+
+
+    #ref{
+      font-size: x-small;
+      font-style: italic;
+    }
+    
+  </style>
+</header>
+
+<body>
+  <h2 class="pic_text">Handshake under HTTPS <h2>
+  <hr>
+  <br>
+  <h3 id="#How_https_works" class="pic_text">How does HTTPS work</h3>
+  <p class="pic_text">As discussed, the main <a href="1_WhatsHTTPS.html#Difference"><span id="bold">difference</span></a> between <span id="bold">HTTPS</span> and <span id="bold">HTTP</span></a> is the use of <a href="encryption.html"><span id="small_title">encryption</span></a>.  In HTTPS, <a href="TLS.html"><span id="small_title">Transport Layer Security (TLS) </span></a>is used to encrypt the <span id="bold">request</span> and <span id="bold">response</span> between the client and web server to increase security of data transfer, i.e. HTTPS is not a separate protocol from HTTP but the use of TLS encryption over HTTP.  The <a href="https://aws.amazon.com/what-is/ssl-certificate" target="_blank"><span id="bold">TLS certificate</span></a> is also used to verify that the web server is indeed authentic. </p>
+  <p  class="pic_text">All <span id="bold">HTTPS</span> communications are also done by <span id="bold">requests</span> and <span id="bold">responses</span> between the client and the server but have additional steps to cater for the exchange of TLS version, encryption protocol supported, digital certificate etc.  </p>
+  <br/>
+
+  <h3 id="#https_steps" class="pic_text">HTTPS Requests and Response</h3>
+  <p class="pic_text">The exact <span id="bold">requests</span> and <span id="bold">response</span> between the client and server under <span id="bold">HTTPS</span> vary depending on the TLS version.  To illustrate,  the steps of TLS 1.2 connection are given below.  </p>
+  <p>
+    <br/>
+    <figure style="float: right; width: 45%;">
+      <img src="Picture/steps_2.jpg" style="width: 100%; height: auto;">
+      <figcaption style="font-style: italic;">HTTPS requests and responses captured by Wireshark</figcaption>
+    
+    </figure>
+  <ol>
+      <li>Client Hello: 
+        <ul>
+          <li>the client  will initiate a connection by sending a <span id="bold">Hello</span> message to the web server</li>
+          <li>the client will also send a list of supported TLS (e.g. TLS 1.0, 1.1, 1.2 etc.) and the <a href="https://www.namecheap.com/blog/beginners-guide-to-tls-cipher-suites/" target="_blank"><span id="bold">cipher suite</span></a> (e.g. TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) to the server</li>
+        </ul>
+      </li>
+      <br/>
+      <li>Server Hello:
+        <ul>
+          <li>the web server will respond to the connection request by sending <span id="bold">Hello</span> message to the web browser</li>
+          <li>the server will send over its <a href="https://aws.amazon.com/what-is/ssl-certificate" target="_blank"><span id="bold">TLS certificate</span></a> and the chosen encryption algorithm</li>
+        </ul>
+      </li>
+      <br/>
+      <li>Authentication:
+        <ul>
+          <li>the client verifies the server’s <a href="https://aws.amazon.com/what-is/ssl-certificate" target="_blank"><span id="bold">TLS certificate</span></a> with the certificate authority</li> 
+          
+        </ul>
+      </li>
+      <br/>
+      <li>Session Key:
+        <ul>
+          <li>after validation, the client will send over the <a href="https://www.cryptologie.net/article/340/tls-pre-master-secrets-and-master-secrets/" target="_blank"><span id="bold">pre-master secret</span></a> which is encrypted with the server’s public key</li>
+          <li>the client and web server use the <a href="https://www.cryptologie.net/article/340/tls-pre-master-secrets-and-master-secrets/" target="_blank"><span id="bold">pre-master secret</span></a> to create the session keys independently</li>
+          <li>the client and server acknowledge they are ready by exchanging the <span id="bold">Finished</span> message using the session keys </li>
+        </ul>
+      </li>
+  </ol>
+</p>
+  <p class="pic_text">All subsequent exchanges will be encrypted using the session keys. The client decrypts and renders the received content from the server.</p>
+
+  <br/>
+  <br/>
+  <hr>
+    <h3 class="pic_text">Reference</h3>
+    <ul id="ref" class="pic_text">   
+      <li>Anonymous, (n.d.). TLS Security 5: Establishing a TLS Connection. Acunetix. https://www.acunetix.com/blog/articles/establishing-tls-ssl-connection-part-5/</li>
+
+      <li>Anonymous, (n.d.). What happens in a TLS handshake. CloudFlare. 
+        https://www.cloudflare.com/en-gb/learning/ssl/what-happens-in-a-tls-handshake/</li>
+      <li>Anonymous, (n.d.). https://wireshark.org/</li>
+    </ul>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</body>
+</html>

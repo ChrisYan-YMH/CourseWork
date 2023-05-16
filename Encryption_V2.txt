@@ -1,0 +1,46 @@
+<h1>Encryption</h1>
+<h3>Encryption keys</h3>
+<p>An encryption key is a random series of binary digits that is used to encrypt and decrypt information shared between a sender and receiver. There are two types of encryption keys: symmetric and asymmetric. Symmetric encryption uses only one secret key to encrypt and decrypt, while asymmetric encryption uses a pair of keys: a public key and a private key. Encryption keys are used to protect data and are managed through encryption key management, which involves tasks such as protecting, storing, backing up, and organizing encryption keys. The current standard for encryption is AES-256, which has a key length of 256 bits and is considered unbreakable with modern computing power.</p>
+<h3>Working process of encryption keys</h3>
+<p>The encryption process converts or transforms information into scrambled data to hide it from malicious actors. Then, the message is automatically unscrambled for the intended recipient of the message. Encryption keys are a random series of binary digits that are either symmetric or asymmetric. The encryption algorithm uses the encryption key to encrypt the plaintext, and the same key is used to decrypt the ciphertext.</p>
+<h3>Difference between symmetric and asymmetric keys</h3>
+<p>The main difference between symmetric and asymmetric encryption keys is that symmetric encryption uses only one key to encrypt and decrpt data, while asymmetric encryption, uses a pair of keys: a public key and a private key. In symmetric encryption, the same key is used for both encryption and decryption, which makes it faster and more efficient for encrypting larger amounts of data. However, symmetric encryption is considered less secure than asymmetric encryption because the same key is used for both encryption and decryption, which means that if the key is compromised, the data can be easily decrypted. Asymmetric encryption, on the other hand, uses a pair of keys, which makes it more secure but slower and less efficient than symmetric encryption.</p>
+<h3>Risk of losing a private key in asymmetric encryption</h3>
+<p>Losing a private keyin asymmetric encryption can pose significant risks. If a private key is lost, the encrypted information cannot be encrypted, and the owner of the private key will not be able to read any message sent to them. Additionally, if a private key is lost and falls into the wrong hands, anyone who finds it can read all messages, even if they are private. This can result in man-in-the-middle attack, where an attacker intercepts and alters the communication between two parties. Therefore, it is crucial to store private keys securely and to have a backup plan in case the private key is lost or compromised.</p>
+<h3>References:</h3>
+<ol>
+    <li>
+        <p><em>Asymmetric encryption: Definition, architecture, usage</em>. (n.d.). Identity | Okta. <a href="https://www.okta.com/identity-101/asymmetric-encryption/">https://www.okta.com/identity-101/asymmetric-encryption/</a></p>
+    </li>
+    <li>
+        <p><em>Asymmetric vs symmetric encryption: What&rsquo;s the difference?</em> (2022, August 9). TechRepublic. <a href="https://www.techrepublic.com/article/asymmetric-vs-symmetric-encryption/">https://www.techrepublic.com/article/asymmetric-vs-symmetric-encryption/</a></p>
+    </li>
+    <li>
+        <p>McKay, D. (2016, September 21). <em>What is encryption, and how does it work?</em> How-To Geek. <a href="https://www.howtogeek.com/33949/htg-explains-what-is-encryption-and-how-does-it-work/">https://www.howtogeek.com/33949/htg-explains-what-is-encryption-and-how-does-it-work/</a></p>
+    </li>
+    <li>
+        <p><em>Symmetric vs asymmetric encryption - 5 differences explained by experts</em>. (2020, June 18). InfoSec Insights. <a href="https://sectigostore.com/blog/5-differences-between-symmetric-vs-asymmetric-encryption/">https://sectigostore.com/blog/5-differences-between-symmetric-vs-asymmetric-encryption/</a></p>
+    </li>
+    <li>
+        <p><em>Symmetric vs. asymmetric encryption: What are the differences?</em> (2022, June 14). MUO. <a href="https://www.makeuseof.com/symmetric-vs-asymmetric-encryption/">https://www.makeuseof.com/symmetric-vs-asymmetric-encryption/</a></p>
+    </li>
+    <li>
+        <p><em>Symmetric vs. asymmetric encryption: What&apos;s the difference?</em> (2022, July 22). SearchSecurity. <a href="https://www.techtarget.com/searchsecurity/answer/What-are-the-differences-between-symmetric-and-asymmetric-encryption-algorithms">https://www.techtarget.com/searchsecurity/answer/What-are-the-differences-between-symmetric-and-asymmetric-encryption-algorithms</a></p>
+    </li>
+    <li>
+        <p><em>What is an encryption key? Types you need to know</em>. (2022, September 21). SoftwareLab. <a href="https://softwarelab.org/what-is-an-encryption-key/">https://softwarelab.org/what-is-an-encryption-key/</a></p>
+    </li>
+    <li>
+        <p><em>What is asymmetric cryptography? Definition from SearchSecurity</em>. (2021, September 27). SearchSecurity. <a href="https://www.techtarget.com/searchsecurity/definition/asymmetric-cryptography">https://www.techtarget.com/searchsecurity/definition/asymmetric-cryptography</a></p>
+    </li>
+    <li>
+        <p><em>What is encryption and how does it protect your data?</em> (n.d.). Official Site | Norton&trade; - Antivirus &amp; Anti-Malware Software. <a href="https://us.norton.com/blog/privacy/what-is-encryption">https://us.norton.com/blog/privacy/what-is-encryption</a></p>
+    </li>
+    <li>
+        <p><em>What is encryption key management? | Definition from TechTarget</em>. (2017, March 14). Data Backup. <a href="https://www.techtarget.com/searchdatabackup/definition/encryption-key-management">https://www.techtarget.com/searchdatabackup/definition/encryption-key-management</a></p>
+    </li>
+    <li>
+        <p><em>What is encryption? Data encryption defined</em>. (n.d.). IBM - United States. <a href="https://www.ibm.com/topics/encryption">https://www.ibm.com/topics/encryption</a></p>
+    </li>
+</ol>
+<div style="color: red;">Created with <a href="https://wordtohtml.net/">WordToHTML.net</a> trial.</div>
